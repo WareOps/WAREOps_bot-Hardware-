@@ -10,7 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 
 install(
-  DIRECTORY urdf rviz config maps launch
+  DIRECTORY urdf config maps launch
   DESTINATION share/${PROJECT_NAME}/
   )
 
