@@ -86,7 +86,7 @@ class StitchedRackScannerNode(Node):
         super().__init__('stitched_rack_scanner_node')
 
         # Parameters
-        self.declare_parameter('cam_url', 'http://10.225.34.175/mjpeg')
+        self.declare_parameter('cam_url', 'http://10.225.34.222:81/stream')
         self.declare_parameter('camera_height_cm', DEFAULT_CAMERA_HEIGHT_CM)
         self.declare_parameter('rack_height_cm', DEFAULT_RACK_HEIGHT_CM)
         self.declare_parameter('rack_horizontal_cm', DEFAULT_RACK_HORIZONTAL_CM)

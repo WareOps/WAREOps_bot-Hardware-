@@ -106,7 +106,7 @@ PITCH_MAX = 160       # Maximum allowed pitch (tilt DOWN limit)
 
 # ESP32-CAM stream URL — all devices on same mobile hotspot
 # Update this IP to match your ESP32-CAM's IP on the hotspot network
-ESP32_CAM_STREAM_URL = "http://192.168.43.100:81/stream"
+ESP32_CAM_STREAM_URL = "http://10.225.34.222:81/stream"
 
 # Servo movement speed (degrees per command for ESP32 trajectory)
 SERVO_SPEED = 20

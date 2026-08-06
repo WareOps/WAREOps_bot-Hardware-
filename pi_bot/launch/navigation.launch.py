@@ -3,7 +3,7 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, ExecuteProcess, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
@@ -43,9 +43,20 @@ def generate_launch_description():
         ),
         launch_arguments={
             'use_sim_time': 'false',
-            'map': os.path.join(pkg_share, 'maps', 'New.yaml'),
+            'map': os.path.join(pkg_share, 'maps', 'New_map.yaml'),
             'params_file': os.path.join(pkg_share, 'config', 'param_nav2.yaml'),
         }.items()
+    )
+
+    # 5. Delayed execution of initial pose setup script
+    initial_pose_cmd = TimerAction(
+        period=8.0,  # Delay execution by 8 seconds to ensure Nav2 nodes are ready
+        actions=[
+            ExecuteProcess(
+                cmd=['python3', '/home/abhinav/warehouse_bot_simulation_ws/src/initialise.py'],
+                output='screen'
+            )
+        ]
     )
 
     return LaunchDescription([
@@ -53,4 +64,5 @@ def generate_launch_description():
         rplidar,
         map_to_odom_tf,
         nav2_bringup,
+        initial_pose_cmd,
     ])

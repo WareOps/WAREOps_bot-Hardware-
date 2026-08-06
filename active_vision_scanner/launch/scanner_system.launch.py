@@ -10,13 +10,13 @@ def generate_launch_description():
     # -----------------------------------------------------------------------
     esp32_ip_arg = DeclareLaunchArgument(
         'esp32_ip',
-        default_value='192.168.43.101',
+        default_value='10.225.34.175',
         description='IP address of the ESP32 Servo Controller'
     )
     
     esp32_cam_url_arg = DeclareLaunchArgument(
         'esp32_cam_url',
-        default_value='http://192.168.43.100:81/stream',
+        default_value='http://10.225.34.222:81/stream',
         description='ESP32-CAM MJPEG Video Stream URL'
     )
 

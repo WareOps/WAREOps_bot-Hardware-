@@ -36,7 +36,7 @@ class ESP32WiFiBridge(Node):
         super().__init__('esp32_wifi_bridge')
 
         # Parameters
-        self.declare_parameter('esp32_ip', '10.225.34.174')
+        self.declare_parameter('esp32_ip', '10.225.34.175')
         self.declare_parameter('esp32_port', 80)
         self.declare_parameter('timeout', 5.0)
         self.declare_parameter('status_poll_rate', 2.0)  # Hz for status polling

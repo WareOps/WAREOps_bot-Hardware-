@@ -148,10 +148,13 @@ ros2 launch pi_bot launch_robot.launch.py
 # 2. Launch SLAM Toolbox for mapping (or navigation for autonomous drive)
 ros2 launch pi_bot slam_map.launch.py
 
-# 3. Launch Nav2_bringup ( navigation for autonomous drive)
+# 3. Launch Nav2_bringup (navigation for autonomous drive with delayed initial pose setup)
 ros2 launch pi_bot navigation.launch.py map:=/path/to/my_map.yaml
 
-
+# 4. Optional: Run autonomous rack navigation script or full tour manager
+python3 initialise.py
+python3 go_to_rack_r4_a3.py
+python3 full_tour.py
 ```
 
 ### On Local Computer (Control & Inspection):
@@ -179,11 +182,17 @@ src/
 ├── diffdrive_arduino/      # [Raspberry Pi] ros2_control C++ hardware interface plugin
 ├── joy_teleop/             # [Local PC] Joystick teleoperation node
 ├── Motors/                 # [Local PC] Arduino Nano motor firmware (ROSArduinoBridge)
-├── pi_bot/                 # [Raspberry Pi] URDF, RPLidar driver, SLAM, & Nav2 configs
+├── pi_bot/                 # [Raspberry Pi] URDF, RPLidar driver, SLAM, & Nav2 launch configs
 ├── rviz/                   # [Local PC] RViz2 display configuration files
 ├── serial/                 # [Raspberry Pi] Serial communication C++ library
+├── initialise.py           # Delayed initial pose setup script for Nav2 (triggered in navigation.launch.py)
+├── full_tour.py            # Multi-rack automated inspection sequence manager
+├── go_to_rack_r3_b3.py     # Waypoint navigation script for Rack R3_B3
+├── go_to_rack_r4_a2.py     # Waypoint navigation script for Rack R4_A2
+├── go_to_rack_r4_a3.py     # Waypoint navigation script for Rack R4_A3
 ├── HARDWARE.md             # Complete hardware specification sheet
 ├── system_overview.md       # Detailed active vision system flow documentation
+├── warehouse_database.xlsx # Master warehouse inventory Excel database
 └── warehouse_database.ods  # Excel/ODS master inventory database file
 ```
 
