@@ -73,7 +73,7 @@ ros2 launch pi_bot slam_map.launch.py
 ```
 
 ### 4. Launch Navigation2 Stack
-Launches path planning, costmaps, and obstacle avoidance using pre-configured parameters. Automatically includes delayed execution (8s) of `/home/abhinav/warehouse_bot_simulation_ws/src/initialise.py` to set initial pose once Nav2 lifecycle nodes are active:
+Launches path planning, costmaps, and obstacle avoidance using pre-configured parameters. Automatically includes delayed execution (8s) of `/home/abhinav/warehouse_bot_simulation_ws/src/scripts/initialise.py` to set initial pose once Nav2 lifecycle nodes are active:
 ```bash
 ros2 launch pi_bot navigation.launch.py map:=/path/to/my_map.yaml
 ```

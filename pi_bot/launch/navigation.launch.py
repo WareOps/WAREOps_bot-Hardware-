@@ -53,7 +53,7 @@ def generate_launch_description():
         period=8.0,  # Delay execution by 8 seconds to ensure Nav2 nodes are ready
         actions=[
             ExecuteProcess(
-                cmd=['python3', '/home/abhinav/warehouse_bot_simulation_ws/src/initialise.py'],
+                cmd=['python3', '/home/abhinav/warehouse_bot_simulation_ws/src/scripts/initialise.py'],
                 output='screen'
             )
         ]

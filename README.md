@@ -152,9 +152,9 @@ ros2 launch pi_bot slam_map.launch.py
 ros2 launch pi_bot navigation.launch.py map:=/path/to/my_map.yaml
 
 # 4. Optional: Run autonomous rack navigation script or full tour manager
-python3 initialise.py
-python3 go_to_rack_r4_a3.py
-python3 full_tour.py
+python3 scripts/initialise.py
+python3 scripts/go_to_rack_r4_a3.py
+python3 scripts/full_tour.py
 ```
 
 ### On Local Computer (Control & Inspection):
@@ -179,17 +179,20 @@ ros2 launch active_vision_scanner scanner_system.launch.py \
 ```text
 src/
 ├── active_vision_scanner/  # [Local PC] ESP32 WiFi bridge & OpenCV QR scanner state machine
+├── Chassis_step_file/      # 3D CAD step model file of the WareOps robot chassis
 ├── diffdrive_arduino/      # [Raspberry Pi] ros2_control C++ hardware interface plugin
+├── Images/                 # High-resolution hardware and assembly gallery with README.md
 ├── joy_teleop/             # [Local PC] Joystick teleoperation node
 ├── Motors/                 # [Local PC] Arduino Nano motor firmware (ROSArduinoBridge)
 ├── pi_bot/                 # [Raspberry Pi] URDF, RPLidar driver, SLAM, & Nav2 launch configs
 ├── rviz/                   # [Local PC] RViz2 display configuration files
+├── scripts/                # Autonomous navigation waypoint & full tour sequence scripts
+│   ├── initialise.py       # Delayed initial pose setup script for Nav2
+│   ├── full_tour.py        # Multi-rack automated inspection sequence manager
+│   ├── go_to_rack_r3_b3.py # Waypoint navigation script for Rack R3_B3
+│   ├── go_to_rack_r4_a2.py # Waypoint navigation script for Rack R4_A2
+│   └── go_to_rack_r4_a3.py # Waypoint navigation script for Rack R4_A3
 ├── serial/                 # [Raspberry Pi] Serial communication C++ library
-├── initialise.py           # Delayed initial pose setup script for Nav2 (triggered in navigation.launch.py)
-├── full_tour.py            # Multi-rack automated inspection sequence manager
-├── go_to_rack_r3_b3.py     # Waypoint navigation script for Rack R3_B3
-├── go_to_rack_r4_a2.py     # Waypoint navigation script for Rack R4_A2
-├── go_to_rack_r4_a3.py     # Waypoint navigation script for Rack R4_A3
 ├── HARDWARE.md             # Complete hardware specification sheet
 ├── system_overview.md       # Detailed active vision system flow documentation
 ├── warehouse_database.xlsx # Master warehouse inventory Excel database
