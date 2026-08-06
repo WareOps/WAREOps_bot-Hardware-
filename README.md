@@ -152,7 +152,6 @@ ros2 launch pi_bot slam_map.launch.py
 ros2 launch pi_bot navigation.launch.py map:=/path/to/my_map.yaml
 
 # 4. Optional: Run autonomous rack navigation script or full tour manager
-python3 scripts/initialise.py
 python3 scripts/go_to_rack_r4_a3.py
 python3 scripts/full_tour.py
 ```
