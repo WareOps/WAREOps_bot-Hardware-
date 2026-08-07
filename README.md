@@ -4,6 +4,14 @@ An end-to-end Autonomous Mobile Robot (AMR) system for warehouse navigation, map
 
 ---
 
+## 🎥 Video Demonstrations & Project Demos
+
+[![YouTube Playlist](https://img.shields.io/badge/YouTube-Watch%20Full%20Project%20Playlist-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/playlist?list=PLdkPHi9wHG-M&si=vZzbjLmxS52RyPB2)
+
+* 🎬 **[Watch Complete Project Demonstration Playlist on YouTube](https://youtube.com/playlist?list=PLdkPHi9wHG-M&si=vZzbjLmxS52RyPB2)** — Includes full autonomous navigation tours, SLAM mapping, active vision pan-tilt QR scanning, and hardware testing demonstrations.
+
+---
+
 ## 🏗️ System Architecture & Package Deployment Split
 
 The repository is structured for a multi-device deployment between the **onboard Raspberry Pi 4** (robot hardware control & navigation) and the **Local Computer** (operator station, active vision processing, teleoperation, and visualization).
