@@ -4,6 +4,13 @@ This directory contains high-resolution photographs detailing the physical hardw
 
 ---
 
+## 🤖 System Overview & Feature Architecture
+
+![WareOps Bot System Overview](Bot.png)
+*WareOps Autonomous Mobile Robot hardware architecture, active vision pan-tilt system, sensor suite, and system capabilities overview.*
+
+---
+
 ## 📸 Assembled Robot Views
 
 ### Robot Perspective Overview
@@ -74,9 +81,9 @@ This directory contains high-resolution photographs detailing the physical hardw
 
 ## 🛠️ Hardware Specification Summary
 
-- **Primary Controller**: ESP32 / Microcontroller bridge communicating via serial hardware interface
-- **LiDAR Sensor**: RPLiDAR A1 360° 2D Laser Scanner
-- **Vision System**: ESP32-CAM Active Vision Scanner on Pan/Tilt Servo Mount
-- **Motor Driver**: Cytron Dual-Channel DC Motor Driver
-- **Power System**: 11.1V 3S 2200mAh 80C LiPo Battery with DC-DC Buck Converters
+- **Main Controller**: Raspberry Pi 4 (ROS 2 Humble, Nav2, AMCL, SLAM Toolbox)
+- **Motor Control**: Arduino Nano & Cytron Dual-Channel DC Motor Driver
+- **LiDAR Sensor**: RPLidar A1M8 360° 2D Laser Scanner
+- **Active Vision System**: ESP32-CAM Pan/Tilt 2-DOF Camera Module for multi-tier rack QR/barcode auditing
+- **Power System**: 11.1V 3S High Performance LiPo Battery with DC-DC Buck Converters
 - **Chassis**: Custom 3D-Printed High-Durability Modular Enclosure
