@@ -8,7 +8,7 @@ An end-to-end Autonomous Mobile Robot (AMR) system for warehouse navigation, map
 
 [![YouTube Playlist](https://img.shields.io/badge/YouTube-Watch%20Full%20Project%20Playlist-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/playlist?list=PLdkPHi9wHG-M&si=vZzbjLmxS52RyPB2)
 
-* 🎬 **[Watch Complete Project Demonstration Playlist on YouTube](https://youtube.com/playlist?list=PLdkPHi9wHG-M&si=vZzbjLmxS52RyPB2)** — Includes full autonomous navigation tours, SLAM mapping, active vision pan-tilt QR scanning, and hardware testing demonstrations.
+*  **[Watch Complete Project Demonstration Playlist on YouTube](https://youtube.com/playlist?list=PLdkPHi9wHG-M&si=vZzbjLmxS52RyPB2)** — Includes full autonomous navigation tours, SLAM mapping, active vision pan-tilt QR scanning, and hardware testing demonstrations.
 
 ---
 
