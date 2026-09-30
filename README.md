@@ -4,7 +4,7 @@ An end-to-end Autonomous Mobile Robot (AMR) system for warehouse navigation, map
 
 ---
 
-## 🎥 Video Demonstrations & Project Demos
+##  Video Demonstrations & Project Demos
 
 [![YouTube Playlist](https://img.shields.io/badge/YouTube-Watch%20Full%20Project%20Playlist-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/playlist?list=PLdkPHi9wHG-M&si=vZzbjLmxS52RyPB2)
 
@@ -12,7 +12,7 @@ An end-to-end Autonomous Mobile Robot (AMR) system for warehouse navigation, map
 
 ---
 
-## 🏗️ System Architecture & Package Deployment Split
+##  System Architecture & Package Deployment Split
 
 The repository is structured for a multi-device deployment between the **onboard Raspberry Pi 4** (robot hardware control & navigation) and the **Local Computer** (operator station, active vision processing, teleoperation, and visualization).
 
@@ -25,7 +25,7 @@ The repository is structured for a multi-device deployment between the **onboard
             |                                                         |
             v                                                         v
 +-----------------------+                                 +-----------------------+
-|  🤖 RASPBERRY PI 4    |                                 |  💻 LOCAL COMPUTER    |
+|   RASPBERRY PI 4    |                                 |   LOCAL COMPUTER    |
 | (Robot Controller)    |                                 | (Operator Station)    |
 +-----------------------+                                 +-----------------------+
 | • pi_bot              |                                 | • active_vision_scanner|
@@ -35,7 +35,7 @@ The repository is structured for a multi-device deployment between the **onboard
             |                                             +-----------------------+
             v                                                         |
 +-----------------------+                                             |
-| ⚙️ Hardware           |                                             v
+|  Hardware           |                                             v
 | • Arduino Nano        |<============================================+
 | • RPLidar A1M8        |   (ESP32-CAM MJPEG Stream & WiFi Servo HTTP)
 | • Motor Drivers       |
@@ -44,9 +44,9 @@ The repository is structured for a multi-device deployment between the **onboard
 
 ---
 
-## 📦 Package Distribution Guide
+##  Package Distribution Guide
 
-### 🔴 Packages to clone on **Raspberry Pi** (Robot Hardware & Navigation)
+###  Packages to clone on **Raspberry Pi** (Robot Hardware & Navigation)
 
 | Package | Description |
 |---|---|
@@ -54,7 +54,7 @@ The repository is structured for a multi-device deployment between the **onboard
 | **`serial`** | C++ serial library required by `diffdrive_arduino` to communicate over USB with the Arduino motor controller. |
 | **`diffdrive_arduino`** | `ros2_control` hardware interface C++ plugin interfacing with Arduino Nano for differential drive wheel odometry and motor commands. |
 
-### 🔵 Packages to clone on **Local Computer** (Workstation & Vision Processing)
+###  Packages to clone on **Local Computer** (Workstation & Vision Processing)
 
 | Package | Description |
 |---|---|
@@ -65,7 +65,7 @@ The repository is structured for a multi-device deployment between the **onboard
 
 ---
 
-## 🚀 Quick Start Guide
+##  Quick Start Guide
 
 ### 1. Prerequisites & Dependencies
 
@@ -145,7 +145,7 @@ pip install pyzbar "numpy<2"
 
 ---
 
-## 🕹️ Running the System
+##  Running the System
 
 ### On Raspberry Pi (Robot Hardware Bringup):
 
@@ -181,7 +181,7 @@ ros2 launch active_vision_scanner scanner_system.launch.py \
 
 ---
 
-## 📂 Repository Directory Tree
+##  Repository Directory Tree
 
 ```text
 src/
@@ -208,6 +208,6 @@ src/
 
 ---
 
-## 📄 Documentation Links
+##  Documentation Links
 * [HARDWARE.md](HARDWARE.md): Detailed hardware connections, pinouts, and power distribution specs.
 * [system_overview.md](system_overview.md): Complete breakdown of network architecture, ESP32 pan-tilt trajectory, and vision state machine flow.
